@@ -12,8 +12,7 @@
 	<artifactId>configuration-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>configuration-server</name>
-	<description>Demo project for Spring Boot</description>
-
+	<description>Central Configuration Store</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Hoxton.RC2</spring-cloud.version>
@@ -24,7 +23,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
