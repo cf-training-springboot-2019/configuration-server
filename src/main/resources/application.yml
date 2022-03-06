@@ -1,0 +1,27 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: '@project.name@'
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/cf-training-springboot-2019/configuration-repository.git
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health
+  ###ACTUATOR
+management:
+  endpoint:
+    info:
+      enabled: true
+info:
+  app:
+    name: '@project.name@'
+    description: '@project.description@'
+    version: '@project.version@'
